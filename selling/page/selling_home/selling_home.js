@@ -26,6 +26,11 @@ wn.module_page["Selling"] = [
 				description: wn._("Confirmed orders from Customers."),
 				doctype:"Sales Order"
 			},
+			{
+                                label: wn._("Directory"),
+                                //description: wn._("Confirmed orders from Customers."),
+                                doctype:"Test Customer"
+                        },
 		]
 	},
 	{
@@ -171,4 +176,4 @@ wn.module_page["Selling"] = [
 
 pscript['onload_selling-home'] = function(wrapper) {
 	wn.views.moduleview.make(wrapper, "Selling");
-}
+	}

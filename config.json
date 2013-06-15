@@ -10,12 +10,14 @@
 			"link": "accounts-home",
 			"color": "#025770",
 			"icon": "icon-money",
+			"label":"Cash",
 			"type": "module"
 		},
 		"Stock": {
 			"type": "module",
 			"link": "stock-home",
 			"color": "#a66a02",
+			"label":"Materials",
 			"icon": "icon-truck"
 		},
 		"Buying": {

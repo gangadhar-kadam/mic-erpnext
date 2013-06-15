@@ -15,8 +15,8 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* toolbar settings */
-wn.provide('erpnext.toolbar');
 
+wn.provide('erpnext.toolbar');
 erpnext.toolbar.setup = function() {
 	// modules 
 	erpnext.toolbar.add_modules();
@@ -28,7 +28,38 @@ erpnext.toolbar.setup = function() {
 	$('.navbar .pull-right').append('\
 		<li><a href="#!messages" title="'+wn._('Unread Messages')
 			+'"><span class="navbar-new-comments"></span></a></li>');
-
+  
+   var currentdate = new Date(); 
+   var weekday=new Array(7);
+   var mont=new Array(12);
+   weekday[0]="Sunday";
+   weekday[1]="Monday";
+   weekday[2]="Tuesday";
+   weekday[3]="Wednesday";
+   weekday[4]="Thursday";
+   weekday[5]="Friday";
+   weekday[6]="Saturday";
+   mont[1]="Jan";
+   mont[2]="Feb";
+   mont[3]="Mar";
+   mont[4]="Apr";
+   mont[5]="May";
+   mont[6]="Jun";
+   mont[7]="Jul";
+   mont[8]="Aug";
+   mont[9]="Sep";
+   mont[10]="Oct";
+   mont[11]="Nov";		
+   mont[12]="Dec";
+   var datetime = "<h style='font-size:19px'>"+currentdate.getDate()+"</h>" + "  "+  mont[(parseInt(currentdate.getMonth())    + 1)]
+   + "  " + currentdate.getFullYear() +"<br>"+weekday[currentdate.getDay()]+" , "   
+   + currentdate.getHours() + ":"  
+   + currentdate.getMinutes() + ":" + currentdate.getSeconds();       
+    s=datetime;		
+        $('.navbar .pull-right').append('<li><h id="a1" style="color:white;margin-top:35px;font-size:12px"><span>\
+                               '+s+'</span></h></li>');
+  
+	//var myvar=setInterval(function(){calendr()},1000);	
 	// help
 	$('.navbar .pull-right').prepend('<li class="dropdown">\
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#" \
