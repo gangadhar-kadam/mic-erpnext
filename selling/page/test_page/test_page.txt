@@ -1,0 +1,32 @@
+[
+ {
+  "creation": "2013-06-13 11:53:44", 
+  "docstatus": 0, 
+  "modified": "2013-06-13 11:53:44", 
+  "modified_by": "Administrator", 
+  "owner": "Administrator"
+ }, 
+ {
+  "doctype": "Page", 
+  "module": "Selling", 
+  "name": "__common__", 
+  "page_name": "Test Page", 
+  "standard": "Yes", 
+  "title": "Test Page"
+ }, 
+ {
+  "doctype": "Page Role", 
+  "name": "__common__", 
+  "parent": "test-page", 
+  "parentfield": "roles", 
+  "parenttype": "Page", 
+  "role": "Administrator"
+ }, 
+ {
+  "doctype": "Page", 
+  "name": "test-page"
+ }, 
+ {
+  "doctype": "Page Role"
+ }
+]
