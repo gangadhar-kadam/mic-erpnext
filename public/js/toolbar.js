@@ -28,8 +28,16 @@ erpnext.toolbar.setup = function() {
 	$('.navbar .pull-right').append('\
 		<li><a href="#!messages" title="'+wn._('Unread Messages')
 			+'"><span class="navbar-new-comments"></span></a></li>');
-  
-   var currentdate = new Date(); 
+  	
+	//added by Rohit
+	var int=self.setInterval(function(){clock()},1000);
+   	
+	var d='<li><h id="a11" style="color:white;margin-top:35px;font-size:12px"></h></li>';
+	
+  	$('.navbar .pull-right').append(d);
+	function clock()
+	{
+	var currentdate = new Date(); 
    var weekday=new Array(7);
    var mont=new Array(12);
    weekday[0]="Sunday";
@@ -55,10 +63,10 @@ erpnext.toolbar.setup = function() {
    + "  " + currentdate.getFullYear() +"<br>"+weekday[currentdate.getDay()]+" , "   
    + currentdate.getHours() + ":"  
    + currentdate.getMinutes() + ":" + currentdate.getSeconds();       
-    s=datetime;		
-        $('.navbar .pull-right').append('<li><h id="a1" style="color:white;margin-top:35px;font-size:12px"><span>\
-                               '+s+'</span></h></li>');
-  
+    s=datetime;
+
+  	document.getElementById("a11").innerHTML=s;	
+	}
 	//var myvar=setInterval(function(){calendr()},1000);	
 	// help
 	$('.navbar .pull-right').prepend('<li class="dropdown">\

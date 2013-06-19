@@ -38,4 +38,21 @@ class DocType:
 		}
 		return ret
 		
+@webnotes.whitelist()
+def get_fields_label(dt=None, form=1):
+                w1=sql("select name from tabCustomer where category='Branch' or category='Representative'")
+                s1=[]
+                s=1
+                d1=''
+                for d in w1:
+                  d1=d[0]
+                  s1.append(d1)
+                #msgprint(s1)
+                k=cstr(s1).replace("u'","")
+                k1=cstr(k).replace("'","")
+                k2=cstr(k1).replace("[","")
+                k3=cstr(k2).replace("]","")
+                a=cstr(k3).replace(',','\n')
+                #msgprint(a)
+                return cstr("\n"+cstr(a))
 

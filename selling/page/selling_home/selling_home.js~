@@ -26,11 +26,15 @@ wn.module_page["Selling"] = [
 				description: wn._("Confirmed orders from Customers."),
 				doctype:"Sales Order"
 			},
+<<<<<<< HEAD
+			
+=======
 			{
                                 label: wn._("Directory"),
                                 //description: wn._("Confirmed orders from Customers."),
                                 doctype:"Test Customer"
                         },
+>>>>>>> 1ac24a52c3e3397868ce04f494bec424605f6dd4
 		]
 	},
 	{
@@ -41,6 +45,11 @@ wn.module_page["Selling"] = [
 				label: wn._("Customer"),
 				description: wn._("Customer database."),
 				doctype:"Customer"
+			},
+			{
+				label: wn._("Cash"),
+				description: wn._("Cash database."),
+				doctype:"Cash"
 			},
 			{
 				label: wn._("Contact"),

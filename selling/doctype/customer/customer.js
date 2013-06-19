@@ -17,6 +17,26 @@
 wn.require('app/setup/doctype/contact_control/contact_control.js');
 
 cur_frm.cscript.onload = function(doc,dt,dn){
+	if(!doc.dt) {
+                set_field_options('represented_by', '');
+                //return;
+        }
+        wn.call({
+                method: 'selling.doctype.customer.customer.get_fields_label',
+                args: { doctype: doc.dt,fieldname: doc.doct},
+                callback: function(r) {
+                        //alert(r.message);
+                        var insert_after_val = null;
+                        /*doc = locals[doc.doctype][doc.name];
+                        
+                        if(doc.su1) {
+                                
+                        }*/
+                        insert_after_val = doc.represented_by;
+                        set_field_options('represented_by', r.message, insert_after_val);
+                }
+        });
+
 	cur_frm.cscript.load_defaults(doc, dt, dn);
 }
 
@@ -32,6 +52,7 @@ cur_frm.add_fetch('lead_name', 'company_name', 'customer_name');
 cur_frm.add_fetch('default_sales_partner','commission_rate','default_commission_rate');
 
 cur_frm.cscript.refresh = function(doc,dt,dn) {
+	
 	if(sys_defaults.cust_master_name == 'Customer Name')
 		hide_field('naming_series');
 	else
@@ -51,6 +72,7 @@ cur_frm.cscript.refresh = function(doc,dt,dn) {
 			doc: doc,
 		});
 	}
+
 }
 
 cur_frm.cscript.make_address = function() {
@@ -116,6 +138,30 @@ cur_frm.cscript.make_contact = function() {
 cur_frm.fields_dict['customer_group'].get_query = function(doc,dt,dn) {
 	return 'SELECT `tabCustomer Group`.`name`, `tabCustomer Group`.`parent_customer_group` FROM `tabCustomer Group` WHERE `tabCustomer Group`.`is_group` = "No" AND `tabCustomer Group`.`docstatus`!= 2 AND `tabCustomer Group`.%(key)s LIKE "%s" ORDER BY	`tabCustomer Group`.`name` ASC LIMIT 50';
 }
+
+cur_frm.cscript.refresh = function(doc, dt, dn) {
+	alert("hi");
+        if(!doc.dt) {
+                set_field_options('represented_by', '');
+                //return;
+        }
+        wn.call({
+                method: 'selling.doctype.test_customer.test_customer.get_fields_label',
+                args: { doctype: doc.dt,fieldname: doc.doct},
+                callback: function(r) {
+                        //alert(r.message);
+                        var insert_after_val = null;
+                        /*doc = locals[doc.doctype][doc.name];
+                        
+                        if(doc.su1) {
+                                
+                        }*/
+                        insert_after_val = doc.represented_by;
+                        set_field_options('represented_by', r.message, insert_after_val);
+                }
+        });
+}
+
 
 
 cur_frm.fields_dict.lead_name.get_query = erpnext.utils.lead_query;

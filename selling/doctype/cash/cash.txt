@@ -2,7 +2,7 @@
  {
   "creation": "2013-06-17 14:34:58", 
   "docstatus": 0, 
-  "modified": "2013-06-17 15:32:47", 
+  "modified": "2013-06-19 15:08:51", 
   "modified_by": "Administrator", 
   "owner": "Administrator"
  }, 
@@ -71,7 +71,8 @@
   "fieldname": "br", 
   "fieldtype": "Select", 
   "label": "Branch/Representative", 
-  "permlevel": 0
+  "permlevel": 0, 
+  "reqd": 1
  }, 
  {
   "doctype": "DocField", 
@@ -188,9 +189,10 @@
  {
   "doctype": "DocField", 
   "fieldname": "amt", 
-  "fieldtype": "Int", 
+  "fieldtype": "Currency", 
   "label": "Amount", 
-  "permlevel": 0
+  "permlevel": 0, 
+  "reqd": 1
  }, 
  {
   "doctype": "DocField", 

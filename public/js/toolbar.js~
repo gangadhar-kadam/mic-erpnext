@@ -29,7 +29,18 @@ erpnext.toolbar.setup = function() {
 		<li><a href="#!messages" title="'+wn._('Unread Messages')
 			+'"><span class="navbar-new-comments"></span></a></li>');
   
-   var currentdate = new Date(); 
+	var int=self.setInterval(function(){clock()},1000);
+   	
+	var d='<li><h id="a11" style="color:white;margin-top:35px;font-size:12px"></h></li>';
+	
+	//setInterval(d,1000);
+	//alert(d);		
+        /*$('.navbar .pull-right').append('<li><h id="a1" style="color:white;margin-top:35px;font-size:12px"><span>\
+                               '+s+'</span></h></li>');*/
+  	$('.navbar .pull-right').append(d);
+	function clock()
+	{
+	var currentdate = new Date(); 
    var weekday=new Array(7);
    var mont=new Array(12);
    weekday[0]="Sunday";
@@ -51,17 +62,14 @@ erpnext.toolbar.setup = function() {
    mont[10]="Oct";
    mont[11]="Nov";		
    mont[12]="Dec";
-   var datetime = mont[(parseInt(currentdate.getMonth())    + 1)]
+   var datetime = "<h style='font-size:19px'>"+currentdate.getDate()+"</h>" + "  "+  mont[(parseInt(currentdate.getMonth())    + 1)]
    + "  " + currentdate.getFullYear() +"<br>"+weekday[currentdate.getDay()]+" , "   
    + currentdate.getHours() + ":"  
    + currentdate.getMinutes() + ":" + currentdate.getSeconds();       
-    s=datetime;		
-     s1="<br>"+"<h style='font-size:22px'>"+currentdate.getDate()+"</h>";
-	$('.navbar .pull-right').append('<li><h id="a1" style="color:white;vertical-align:center;margin-top:35px;font-size:12px"><span>\
-                               '+s1+'</span></h></li>');
-        $('.navbar .pull-right').append('<li><h id="a1" style="color:white;padding-left:8px;font-size:12px"><span>\
-                               '+s+'</span></h></li>');
-  
+    s=datetime;
+
+  	document.getElementById("a11").innerHTML=s;	
+	}
 	//var myvar=setInterval(function(){calendr()},1000);	
 	// help
 	$('.navbar .pull-right').prepend('<li class="dropdown">\
