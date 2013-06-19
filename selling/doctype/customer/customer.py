@@ -171,7 +171,7 @@ class DocType(TransactionBase):
 				pass
 
 	def on_update(self):
-		self.validate_name_with_customer_group()
+                self.validate_name_with_customer_group()
 		
 		self.update_lead_status()
 		# create account head
@@ -180,6 +180,13 @@ class DocType(TransactionBase):
 		self.update_credit_days_limit()
 		#create address and contact from lead
 		self.create_lead_address_contact()
+                if self.doc.sd2!='Unverified':
+		  resa=sql("select role from tabUserRole where parent='"+webnotes.session['user']+"'")
+		  as1=resa and resa[0][0] or ''
+		  if as1=='Operator':
+		    self.doc.sd2='Unverified'
+		    self.doc.save()
+		
 		
 	def validate_name_with_customer_group(self):
 		if webnotes.conn.exists("Customer Group", self.doc.name):

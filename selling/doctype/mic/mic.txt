@@ -1,0 +1,222 @@
+[
+ {
+  "creation": "2013-06-17 12:42:24", 
+  "docstatus": 0, 
+  "modified": "2013-06-17 12:49:04", 
+  "modified_by": "Administrator", 
+  "owner": "Administrator"
+ }, 
+ {
+  "allow_rename": 1, 
+  "doctype": "DocType", 
+  "document_type": "Transaction", 
+  "module": "Selling", 
+  "name": "__common__"
+ }, 
+ {
+  "doctype": "DocField", 
+  "name": "__common__", 
+  "parent": "Mic", 
+  "parentfield": "fields", 
+  "parenttype": "DocType"
+ }, 
+ {
+  "doctype": "DocPerm", 
+  "name": "__common__", 
+  "parent": "Mic", 
+  "parentfield": "permissions", 
+  "parenttype": "DocType", 
+  "read": 1, 
+  "report": 1, 
+  "write": 1
+ }, 
+ {
+  "doctype": "DocType", 
+  "name": "Mic"
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "se1", 
+  "fieldtype": "Select", 
+  "options": "\nUnlocked\nLocked", 
+  "permlevel": 2
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb1", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "se2", 
+  "fieldtype": "Select", 
+  "options": "\nUnverified\nVerified", 
+  "permlevel": 2
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "sc3", 
+  "fieldtype": "Section Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cg1", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "br", 
+  "fieldtype": "Select", 
+  "label": "Branch/Representative", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cg2", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "dt", 
+  "fieldtype": "Date", 
+  "label": "Date", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cg3", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "trans", 
+  "fieldtype": "Select", 
+  "label": "Transaction", 
+  "options": "\nIncoming\nOutgoing\nOp. bal", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "sct1", 
+  "fieldtype": "Section Break", 
+  "label": "Party Details", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb2", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "name1", 
+  "fieldtype": "Link", 
+  "label": "Name", 
+  "options": "Test Customer", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "address", 
+  "fieldtype": "Small Text", 
+  "label": "Address", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cp", 
+  "fieldtype": "Data", 
+  "label": "Contact Person", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb3", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "tel_no", 
+  "fieldtype": "Data", 
+  "label": "Tel No.", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cell", 
+  "fieldtype": "Data", 
+  "label": "Cell", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "fax", 
+  "fieldtype": "Data", 
+  "label": "Fax", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "e_id", 
+  "fieldtype": "Data", 
+  "label": "Email Id", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "sct2", 
+  "fieldtype": "Section Break", 
+  "label": "Transaction Details", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb4", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "amt", 
+  "fieldtype": "Int", 
+  "label": "Amount", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb5", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "party", 
+  "fieldtype": "Data", 
+  "label": "Party Note", 
+  "permlevel": 0
+ }, 
+ {
+  "create": 1, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "role": "Administrator"
+ }, 
+ {
+  "create": 1, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "role": "Operator"
+ }, 
+ {
+  "doctype": "DocPerm", 
+  "permlevel": 2, 
+  "role": "Administrator"
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "creation": "2013-06-15 11:07:07", 
+  "docstatus": 0, 
+  "modified": "2013-06-15 11:07:07", 
+  "modified_by": "Administrator", 
+  "owner": "Administrator"
+ }, 
+ {
+  "doctype": "Report", 
+  "is_standard": "Yes", 
+  "json": "{\"filters\":[],\"columns\":[[\"name\",\"Test Customer\"]],\"sort_by\":\"Test Customer.ll1\",\"sort_order\":\"desc\",\"sort_by_next\":\"\",\"sort_order_next\":\"desc\"}", 
+  "name": "__common__", 
+  "ref_doctype": "Test Customer", 
+  "report_name": "Test Customer", 
+  "report_type": "Report Builder"
+ }, 
+ {
+  "doctype": "Report", 
+  "name": "Test Customer"
+ }
+]

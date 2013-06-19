@@ -1,8 +1,8 @@
 [
  {
-  "creation": "2013-01-23 19:57:18", 
+  "creation": "2013-06-06 17:04:43", 
   "docstatus": 0, 
-  "modified": "2013-01-29 16:28:03", 
+  "modified": "2013-06-17 15:09:34", 
   "modified_by": "Administrator", 
   "owner": "Administrator"
  }, 
@@ -15,7 +15,7 @@
   "document_type": "Master", 
   "module": "Selling", 
   "name": "__common__", 
-  "search_fields": "customer_name,customer_group,country,territory"
+  "search_fields": "customer_name"
  }, 
  {
   "doctype": "DocField", 
@@ -37,11 +37,30 @@
   "name": "Customer"
  }, 
  {
-  "description": "Note: You Can Manage Multiple Address or Contacts via Addresses & Contacts", 
+  "doctype": "DocField", 
+  "fieldname": "sd1", 
+  "fieldtype": "Select", 
+  "options": "\nUnlocked\nLocked", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cv1", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "sd2", 
+  "fieldtype": "Select", 
+  "options": "\nUnverified\nVerified", 
+  "permlevel": 0
+ }, 
+ {
   "doctype": "DocField", 
   "fieldname": "basic_info", 
   "fieldtype": "Section Break", 
-  "label": "Basic Info", 
+  "label": "Contact Details", 
   "oldfieldtype": "Section Break", 
   "permlevel": 0, 
   "reqd": 0
@@ -50,34 +69,33 @@
   "doctype": "DocField", 
   "fieldname": "customer_name", 
   "fieldtype": "Data", 
-  "hidden": 0, 
-  "in_filter": 1, 
-  "in_list_view": 1, 
-  "label": "Customer Name", 
-  "no_copy": 1, 
-  "oldfieldname": "customer_name", 
-  "oldfieldtype": "Data", 
-  "permlevel": 0, 
-  "print_hide": 0, 
-  "report_hide": 0, 
-  "reqd": 1, 
-  "search_index": 1
- }, 
- {
-  "doctype": "DocField", 
-  "fieldname": "customer_type", 
-  "fieldtype": "Select", 
-  "label": "Customer Type", 
-  "oldfieldname": "customer_type", 
-  "oldfieldtype": "Select", 
-  "options": "\nCompany\nIndividual", 
+  "label": "Name", 
   "permlevel": 0, 
   "reqd": 1
  }, 
  {
   "doctype": "DocField", 
+  "fieldname": "scv1", 
+  "fieldtype": "Section Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "customer_type", 
+  "fieldtype": "Select", 
+  "hidden": 1, 
+  "label": "Customer Type", 
+  "oldfieldname": "customer_type", 
+  "oldfieldtype": "Select", 
+  "options": "\nCompany\nIndividual", 
+  "permlevel": 0, 
+  "reqd": 0
+ }, 
+ {
+  "doctype": "DocField", 
   "fieldname": "naming_series", 
   "fieldtype": "Select", 
+  "hidden": 1, 
   "label": "Series", 
   "no_copy": 1, 
   "options": "\nCUST\nCUSTMUM", 
@@ -89,7 +107,7 @@
   "doctype": "DocField", 
   "fieldname": "lead_name", 
   "fieldtype": "Link", 
-  "hidden": 0, 
+  "hidden": 1, 
   "in_filter": 1, 
   "label": "Lead Ref", 
   "no_copy": 1, 
@@ -104,6 +122,7 @@
   "doctype": "DocField", 
   "fieldname": "column_break0", 
   "fieldtype": "Column Break", 
+  "hidden": 0, 
   "permlevel": 0, 
   "width": "50%"
  }, 
@@ -112,7 +131,7 @@
   "doctype": "DocField", 
   "fieldname": "customer_group", 
   "fieldtype": "Link", 
-  "hidden": 0, 
+  "hidden": 1, 
   "in_filter": 1, 
   "label": "Customer Group", 
   "oldfieldname": "customer_group", 
@@ -120,7 +139,7 @@
   "options": "Customer Group", 
   "permlevel": 0, 
   "print_hide": 0, 
-  "reqd": 1, 
+  "reqd": 0, 
   "search_index": 1
  }, 
  {
@@ -128,6 +147,7 @@
   "doctype": "DocField", 
   "fieldname": "territory", 
   "fieldtype": "Link", 
+  "hidden": 1, 
   "in_list_view": 1, 
   "label": "Territory", 
   "oldfieldname": "territory", 
@@ -135,12 +155,13 @@
   "options": "Territory", 
   "permlevel": 0, 
   "print_hide": 1, 
-  "reqd": 1
+  "reqd": 0
  }, 
  {
   "doctype": "DocField", 
   "fieldname": "address_contacts", 
   "fieldtype": "Section Break", 
+  "hidden": 1, 
   "label": "Address & Contacts", 
   "permlevel": 0
  }, 
@@ -203,6 +224,7 @@
   "doctype": "DocField", 
   "fieldname": "more_info", 
   "fieldtype": "Section Break", 
+  "hidden": 1, 
   "label": "More Info", 
   "oldfieldtype": "Section Break", 
   "permlevel": 0
@@ -260,6 +282,7 @@
   "doctype": "DocField", 
   "fieldname": "column_break3", 
   "fieldtype": "Column Break", 
+  "hidden": 1, 
   "permlevel": 0, 
   "width": "50%"
  }, 
@@ -293,6 +316,7 @@
   "doctype": "DocField", 
   "fieldname": "sales_team_section_break", 
   "fieldtype": "Section Break", 
+  "hidden": 1, 
   "label": "Sales Team", 
   "oldfieldtype": "Section Break", 
   "permlevel": 0
@@ -329,18 +353,46 @@
  {
   "amend": 0, 
   "cancel": 0, 
-  "create": 1, 
+  "create": 0, 
+  "doctype": "DocPerm", 
+  "permlevel": 1, 
+  "report": 1, 
+  "role": "Sales Manager", 
+  "submit": 0, 
+  "write": 0
+ }, 
+ {
+  "amend": 0, 
+  "cancel": 0, 
+  "create": 0, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "report": 1, 
+  "role": "Sales Manager", 
+  "submit": 0, 
+  "write": 0
+ }, 
+ {
+  "amend": 0, 
+  "cancel": 0, 
+  "create": 0, 
+  "doctype": "DocPerm", 
+  "permlevel": 1, 
+  "report": 1, 
+  "role": "Sales User", 
+  "submit": 0, 
+  "write": 0
+ }, 
+ {
+  "amend": 0, 
+  "cancel": 0, 
+  "create": 0, 
   "doctype": "DocPerm", 
   "permlevel": 0, 
   "report": 1, 
   "role": "Sales User", 
   "submit": 0, 
-  "write": 1
- }, 
- {
-  "doctype": "DocPerm", 
-  "permlevel": 2, 
-  "role": "Sales User"
+  "write": 0
  }, 
  {
   "amend": 0, 
@@ -354,9 +406,78 @@
   "write": 1
  }, 
  {
+  "amend": 0, 
+  "cancel": 0, 
+  "create": 0, 
+  "doctype": "DocPerm", 
+  "permlevel": 1, 
+  "report": 1, 
+  "role": "Sales Master Manager", 
+  "submit": 0, 
+  "write": 0
+ }, 
+ {
+  "amend": 0, 
+  "cancel": 0, 
+  "create": 0, 
   "doctype": "DocPerm", 
   "permlevel": 2, 
-  "role": "Sales Master Manager", 
+  "report": 1, 
+  "role": "Accounts Manager", 
+  "submit": 0, 
+  "write": 1
+ }, 
+ {
+  "amend": 0, 
+  "cancel": 0, 
+  "create": 0, 
+  "doctype": "DocPerm", 
+  "permlevel": 2, 
+  "report": 1, 
+  "role": "All", 
+  "submit": 0, 
+  "write": 0
+ }, 
+ {
+  "cancel": 1, 
+  "create": 1, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "report": 1, 
+  "role": "Accounts Manager", 
+  "submit": 0, 
+  "write": 1
+ }, 
+ {
+  "amend": 0, 
+  "cancel": 0, 
+  "create": 0, 
+  "doctype": "DocPerm", 
+  "permlevel": 1, 
+  "report": 1, 
+  "role": "All", 
+  "submit": 0, 
+  "write": 0
+ }, 
+ {
+  "create": 1, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "role": "Operator", 
+  "write": 1
+ }, 
+ {
+  "doctype": "DocPerm", 
+  "permlevel": 3, 
+  "role": "Administrator", 
+  "write": 1
+ }, 
+ {
+  "create": 1, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "report": 1, 
+  "role": "Administrator", 
   "write": 1
  }
 ]

@@ -1,0 +1,329 @@
+[
+ {
+  "creation": "2013-06-10 13:54:00", 
+  "docstatus": 0, 
+  "modified": "2013-06-15 15:53:04", 
+  "modified_by": "Administrator", 
+  "owner": "Administrator"
+ }, 
+ {
+  "allow_copy": 1, 
+  "allow_rename": 1, 
+  "autoname": "Test/.#####", 
+  "doctype": "DocType", 
+  "document_type": "Transaction", 
+  "in_dialog": 0, 
+  "is_submittable": 1, 
+  "module": "Selling", 
+  "name": "__common__", 
+  "read_only_onload": 0, 
+  "search_fields": "name1,phone"
+ }, 
+ {
+  "doctype": "DocField", 
+  "name": "__common__", 
+  "parent": "Test Customer", 
+  "parentfield": "fields", 
+  "parenttype": "DocType"
+ }, 
+ {
+  "doctype": "DocPerm", 
+  "name": "__common__", 
+  "parent": "Test Customer", 
+  "parentfield": "permissions", 
+  "parenttype": "DocType", 
+  "read": 1
+ }, 
+ {
+  "doctype": "DocType", 
+  "name": "Test Customer"
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "doct", 
+  "fieldtype": "Select", 
+  "label": "Master", 
+  "options": "\nItem\nAppraisal\nContact", 
+  "permlevel": 3
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "ss1", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "ss5", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "dd1", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "su1", 
+  "fieldtype": "Select", 
+  "label": "Sub Master", 
+  "options": "\n", 
+  "permlevel": 3
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "f1", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "dd2", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "f1s", 
+  "fieldtype": "Section Break", 
+  "label": "Contact Details", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb11", 
+  "fieldtype": "Column Break", 
+  "in_list_view": 0, 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "ll1", 
+  "fieldtype": "Select", 
+  "in_list_view": 1, 
+  "options": "\nUnlocked\nLocked", 
+  "permlevel": 2
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "comp", 
+  "fieldtype": "Select", 
+  "label": "Competitor", 
+  "options": "No\nYes", 
+  "permlevel": 0, 
+  "reqd": 1
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb12", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "ll2", 
+  "fieldtype": "Select", 
+  "in_list_view": 1, 
+  "options": "\nUnverified\nVerified", 
+  "permlevel": 2
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "st", 
+  "fieldtype": "Select", 
+  "label": "Status", 
+  "options": "Active\nInactive", 
+  "permlevel": 0, 
+  "reqd": 1
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "ps", 
+  "fieldtype": "Section Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "name1", 
+  "fieldtype": "Data", 
+  "in_list_view": 1, 
+  "label": "Name", 
+  "permlevel": 0, 
+  "reqd": 1
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "ad", 
+  "fieldtype": "Small Text", 
+  "label": "Address", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "phone", 
+  "fieldtype": "Data", 
+  "label": "Contact Person", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "tel_no", 
+  "fieldtype": "Data", 
+  "label": "Tel No", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cell_no", 
+  "fieldtype": "Data", 
+  "label": "Cell No", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "sms_no", 
+  "fieldtype": "Data", 
+  "label": "Sms No.", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb1", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "fax", 
+  "fieldtype": "Data", 
+  "label": "Fax", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "eml", 
+  "fieldtype": "Data", 
+  "label": "Email Id", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "bth_date", 
+  "fieldtype": "Date", 
+  "label": "Birth Date", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "ans_date", 
+  "fieldtype": "Date", 
+  "label": "Anniversary Date", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "tin_no", 
+  "fieldtype": "Data", 
+  "label": "Tin No", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "rep_by", 
+  "fieldtype": "Select", 
+  "label": "Represented By", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "remarks", 
+  "fieldtype": "Data", 
+  "label": "Remarks", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "re1", 
+  "fieldtype": "Section Break", 
+  "label": "Specify Commission to be paid to representative", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb4", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cn", 
+  "fieldtype": "Int", 
+  "label": "Commission Rate", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "cb5", 
+  "fieldtype": "Column Break", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "jp", 
+  "fieldtype": "Date", 
+  "label": "Last transaction done on", 
+  "permlevel": 0
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "amended_from", 
+  "fieldtype": "Link", 
+  "label": "Amended From", 
+  "no_copy": 1, 
+  "options": "Test Customer", 
+  "permlevel": 0, 
+  "print_hide": 1, 
+  "read_only": 1
+ }, 
+ {
+  "create": 1, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "report": 1, 
+  "role": "Administrator", 
+  "submit": 0, 
+  "write": 1
+ }, 
+ {
+  "doctype": "DocPerm", 
+  "permlevel": 2, 
+  "role": "Administrator", 
+  "write": 1
+ }, 
+ {
+  "create": 1, 
+  "doctype": "DocPerm", 
+  "permlevel": 0, 
+  "report": 1, 
+  "role": "Operator", 
+  "write": 1
+ }, 
+ {
+  "doctype": "DocPerm", 
+  "permlevel": 1, 
+  "role": "Administrator"
+ }, 
+ {
+  "doctype": "DocPerm", 
+  "permlevel": 1, 
+  "role": "Operator"
+ }
+]
