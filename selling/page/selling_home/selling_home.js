@@ -25,8 +25,7 @@ wn.module_page["Selling"] = [
 				label: wn._("Sales Order"),
 				description: wn._("Confirmed orders from Customers."),
 				doctype:"Sales Order"
-			},
-			
+			},			
 		]
 	},
 	{
@@ -37,11 +36,6 @@ wn.module_page["Selling"] = [
 				label: wn._("Customer"),
 				description: wn._("Customer database."),
 				doctype:"Customer"
-			},
-			{
-				label: wn._("Cash"),
-				description: wn._("Cash database."),
-				doctype:"Cash"
 			},
 			{
 				label: wn._("Contact"),
