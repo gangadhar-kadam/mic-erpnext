@@ -133,16 +133,6 @@ wn.module_page["Accounts"] = [
 		icon: "icon-table",
 		items: [
 			{
-				"label":wn._("Customer Account Head"),
-				route: "query-report/Customer Account Head",
-				doctype: "Account"
-			},
-			{
-				"label":wn._("Supplier Account Head"),
-				route: "query-report/Supplier Account Head",
-				doctype: "Account"
-			},
-			{
 				"label":wn._("General Ledger"),
 				page: "general-ledger"
 			},
@@ -184,11 +174,6 @@ wn.module_page["Accounts"] = [
 			{
 				"label":wn._("Financial Analytics"),
 				page: "financial-analytics"
-			},
-			{
-				"label":wn._("Trend Analyzer"),
-				route: "Report/Profile/Trend Analyzer",
-				doctype: "Sales Invoice"
 			},
 			{
 				"label":wn._("Gross Profit"),
@@ -253,6 +238,11 @@ wn.module_page["Accounts"] = [
 				doctype: "Account"
 			},
 			{
+				"label":wn._("Supplier Account Head"),
+				route: "query-report/Supplier Account Head",
+				doctype: "Account"
+			},
+			{
 				"label":wn._("Item-wise Sales Register"),
 				route: "query-report/Item-wise Sales Register",
 				doctype: "Sales Invoice"
@@ -261,6 +251,21 @@ wn.module_page["Accounts"] = [
 				"label":wn._("Item-wise Purchase Register"),
 				route: "query-report/Item-wise Purchase Register",
 				doctype: "Purchase Invoice"
+			},
+			{
+				"label":wn._("Budget Variance Report"),
+				route: "query-report/Budget Variance Report",
+				doctype: "Cost Center"
+			},
+			{
+				"label":wn._("Purchase Invoice Trends"),
+				route: "query-report/Purchase Invoice Trends",
+				doctype: "Purchase Invoice"
+			},
+			{
+				"label":wn._("Sales Invoice Trends"),
+				route: "query-report/Sales Invoice Trends",
+				doctype: "Sales Invoice"
 			},
 		]
 	}

@@ -7,7 +7,9 @@ cur_frm.cscript.refresh = function(doc, cdt, cdn) {
 
 
 cur_frm.cscript.onload = function(doc, dt, dn) {
-	if(!doc.dt) {
+	//alert(doc.br);
+        if(!doc.dt) {
+                //alert("!doc.dt");
 		set_field_options('br', '');
 		//return;
 	}
@@ -15,7 +17,7 @@ cur_frm.cscript.onload = function(doc, dt, dn) {
 		method: 'selling.doctype.cash.cash.get_fields_label',
 		args: { doctype: doc.dt,fieldname: doc.doct},
 		callback: function(r) {
-			//alert(r.message);
+			alert(r.message);
 			var insert_after_val = null;
 			/*doc = locals[doc.doctype][doc.name];
 			

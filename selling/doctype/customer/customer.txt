@@ -1,8 +1,9 @@
 [
  {
-  "creation": "2013-06-06 17:04:43", 
+
+  "creation": "2013-06-11 14:26:44", 
   "docstatus": 0, 
-  "modified": "2013-06-17 15:09:34", 
+  "modified": "2013-06-11 14:27:57", 
   "modified_by": "Administrator", 
   "owner": "Administrator"
  }, 
@@ -293,7 +294,7 @@
   "label": "Credit Days", 
   "oldfieldname": "credit_days", 
   "oldfieldtype": "Int", 
-  "permlevel": 2
+  "permlevel": 1
  }, 
  {
   "doctype": "DocField", 
@@ -303,7 +304,7 @@
   "oldfieldname": "credit_limit", 
   "oldfieldtype": "Currency", 
   "options": "Company:company:default_currency", 
-  "permlevel": 2
+  "permlevel": 1
  }, 
  {
   "doctype": "DocField", 
@@ -388,11 +389,12 @@
   "cancel": 0, 
   "create": 0, 
   "doctype": "DocPerm", 
-  "permlevel": 0, 
   "report": 1, 
-  "role": "Sales User", 
   "submit": 0, 
   "write": 0
+  "permlevel": 1, 
+  "role": "Sales User"
+
  }, 
  {
   "amend": 0, 
